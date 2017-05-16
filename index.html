@@ -13,6 +13,14 @@
 </html>
 
 <script type="text/babel">
+function Contact(props) {
+    return (
+        <div>
+            email: {props.email}
+        </div>
+    )
+}
+
 function Header(props) {
     return (
         <div>
@@ -35,6 +43,7 @@ function App(props){
         <Header title="Home Page" company="Apple" />
         Hello {props.name}!!!
         <Footer copyright="2017" />
+        <Contact email="test@example.com" />
     </div>
   );
 }
