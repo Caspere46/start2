@@ -8,21 +8,43 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
 </head>
 <body>
-  <div id="container"></div>
+  <div id="app"></div>
 </body>
 </html>
 
 <script type="text/babel">
-function Hello(props){
+function Header(props) {
+    return (
+        <div>
+            Header Title
+        </div>
+    );
+}
+
+function Footer(props) {
+    return (
+        <div>
+            Footer Page
+        </div>
+    )
+}
+
+function App(props){
   return (
-    <div>
-      Hello {props.name}!!!
+    <div class="">
+        <Header />
+        Hello {props.name}!!!
+        <Footer />
     </div>
   );
 }
 
 ReactDOM.render(
-  <Hello name="World" />,
-  document.getElementById('container')
+  <App name="World" />,
+  document.getElementById('app')
 );
 </script>
+
+<style>
+
+</style>
