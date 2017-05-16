@@ -13,6 +13,22 @@
 </html>
 
 <script type="text/babel">
+const data = {
+    header: {
+        title: "Home Page",
+        company: "Apple",
+    },
+    contactheader: {
+        email: "info@apple.com"
+    },
+    footer: {
+        copyright: "2017"
+    },
+    contact: {
+        email: "test@apple.com"
+    }
+}
+
 function Contact(props) {
     return (
         <div>
@@ -40,11 +56,11 @@ function Footer(props) {
 function App(props){
   return (
     <div class="appwrapper">
-        <Header title="Home Page" company="Apple" />
-        <Contact email="info@apple.com" />
+        <Header title={data.header.title} company={data.header.company} />
+        <Contact email={data.contactheader.email} />
         Hello {props.name}!!!
-        <Footer copyright="2017" />
-        <Contact email="test@example.com" />
+        <Footer copyright={data.footer.copyright} />
+        <Contact email={data.contact.email} />
     </div>
   );
 }
