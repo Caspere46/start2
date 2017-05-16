@@ -16,7 +16,7 @@
 function Header(props) {
     return (
         <div>
-            Header Title
+            {props.title} of {props.company}
         </div>
     );
 }
@@ -24,7 +24,7 @@ function Header(props) {
 function Footer(props) {
     return (
         <div>
-            Footer Page
+            All rights reserved. Copyright {props.copyright}
         </div>
     )
 }
@@ -32,9 +32,9 @@ function Footer(props) {
 function App(props){
   return (
     <div class="appwrapper">
-        <Header />
+        <Header title="Home Page" company="Apple" />
         Hello {props.name}!!!
-        <Footer />
+        <Footer copyright="2017" />
     </div>
   );
 }
